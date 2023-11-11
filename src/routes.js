@@ -7,11 +7,11 @@ import SimpleLayout from './layouts/simple';
 import BlogPage from './pages/BlogPage';
 import UserPage from './pages/UserPage';
 import UserPageDetail from './pages/UserPageDetail';
-import LoginPage from './pages/LoginPage';
+import LoginPage from './pages/AuthenticationPage/LoginPage';
 import Page404 from './pages/Page404';
 import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/DashboardAppPage';
-import ImageEditor from './pages/ImageEditor';
+import RegisterPage from './pages/AuthenticationPage/RegisterPage';
 
 // ----------------------------------------------------------------------
 
@@ -28,12 +28,15 @@ export default function Router() {
         { path: 'user-detail', element: <UserPageDetail /> },
         { path: 'products', element: <ProductsPage /> },
         { path: 'blog', element: <BlogPage /> },
-        { path: 'certificate', element: <ImageEditor /> },
       ],
     },
     {
       path: 'login',
       element: <LoginPage />,
+    },
+    {
+      path: 'register',
+      element: <RegisterPage />,
     },
     {
       element: <SimpleLayout />,
