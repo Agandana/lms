@@ -1,13 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Link, Container, Typography, Divider, Stack, Button } from '@mui/material';
-// hooks
-import useResponsive from '../../hooks/useResponsive';
-// components
-import Iconify from '../../components/iconify';
+import { Link, Container, Typography, Grid } from '@mui/material';
 // sections
-import { LoginForm } from '../../sections/auth/login';
+import RegisterForm from '../../sections/auth/register';
 
 // ----------------------------------------------------------------------
 
@@ -43,7 +39,15 @@ export default function RegisterPage() {
               Learning Management System | v1.0.0
             </Typography>
 
-            <LoginForm />
+            <RegisterForm />
+
+            <Grid container justifyContent="center" mt={3}>
+              <Grid item>
+                <Link href="/login" variant="subtitle2">
+                  Return to Login
+                </Link>
+              </Grid>
+            </Grid>
           </StyledContent>
         </Container>
       </StyledRoot>
